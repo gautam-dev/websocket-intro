@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gautam, Messaging App</title>
+<link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="/main.css" rel="stylesheet">
+<script src="/webjars/jquery/jquery.min.js"></script>
+<script src="/webjars/sockjs-client/sockjs.min.js"></script>
+<script src="/webjars/stomp-websocket/stomp.min.js"></script>
+<script src="/app.js"></script>
+<style type="text/css">
+.anyClass {
+			  height:300px;
+			  overflow-y: scroll;
+			}
+</style>
+</head>
+
+
+<body>
+	<noscript>
+		<h2 style="color: #ff0000">Seems your browser doesn't support
+			Javascript! Websocket relies on Javascript being enabled. Please
+			enable Javascript and reload this page!</h2>
+	</noscript>
+	
+	<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Messaging Application</a>
+    </div>
+    <div class="navbar-header navbar-right">
+      <button id="disconnect" class="btn btn-warning ">Disconnect</button>
+    </div>
+  </div>
+</nav>
+        <div id="main-content" class="container">
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-6">
+					<div class="form-group">
+						<label for="name">Enter your Name</label> <input type="text"
+							id="name" class="form-control" placeholder="Your name here..." required="required">
+					</div>
+					<div class="form-group">
+						<button id="connect" class="btn btn-primary">SUBMIT</button>
+					</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	<div class="card shadow p-3 mb-5 bg-blue rounded">
+	<div class="card-body">
+	<div id="sub-content" class="container anyClass" >
+		<div class="row">
+			<div class="col-md-2"></div>
+				<div class="col-md-6">
+				<div class="col-md-6">
+			<ul id="user-list" class="list-group"></ul>
+		</div>
+		
+	
+		<div class="col-md-6">
+			<ul id="msg-conversation" class="list-group"></ul>
+		</div>
+	<form id="send-msg">
+	
+	
+		<div class="form-group">
+			<label for="name"></label> <input type="text" id="message"
+				class="form-control" placeholder="Your Message here..." required="required">
+		</div>
+		<div class="form-group">
+			<button id=send class="btn btn-primary" type="submit">SEND</button>
+		</div>
+
+
+		
+		
+
+	</form>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	<script type="text/javascript">
+
+		$("#sub-content").hide();
+		
+		
+	
+	</script>
+	
+</body>
+</html>
