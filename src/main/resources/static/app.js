@@ -90,17 +90,19 @@ $(function() {
 	});
 	$("#disconnect").click(function() {
 		disconnect();
+		$("#disconnect").hide();
 		$("#main-content").show();
 	});
 	
 	
 	connect();
-	
+	$("#disconnect").hide();
 	$("#connect").click(()=> {
 		$("#main-content").hide();
 		signIn();
 		$("#name").val('');
 		$("#sub-content").show();
+		$("#disconnect").show();
 		 
 	});
 	$("#send").click(()=> {
